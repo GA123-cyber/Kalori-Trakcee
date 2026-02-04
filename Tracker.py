@@ -7,7 +7,7 @@ import os
 
 # --- KONFIGURASI API ---
 # Masukkan API Key kamu di sini atau gunakan environment variable
-API_KEY = "PASTE_API_KEY_KAMU_DISINI"
+API_KEY = "AIzaSyARRFWJP3lut7i9T8L3lIJFfV_JE1zyr4k"
 genai.configure(api_key=API_KEY)
 
 # --- KONFIGURASI MODEL ---
@@ -107,4 +107,5 @@ if not st.session_state.log_makanan:
     st.info("Belum ada makanan yang dicatat.")
 else:
     for idx, item in enumerate(st.session_state.log_makanan):
+
         st.write(f"{idx+1}. **{item['nama_makanan']}** - {item['kalori']} kcal (P: {item['protein']}g, K: {item['karbohidrat']}g, L: {item['lemak']}g)")
